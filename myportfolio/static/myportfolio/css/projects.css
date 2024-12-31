@@ -1,0 +1,242 @@
+
+
+.nname {
+    color: white; /* White color for "I am" */
+    font-size: 2.5rem; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for effect */
+}
+.typing-effect {
+    border-right: 2px solid yellow; /* Cursor effect */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    animation: typing 4s steps(12), blink-caret 0.75s step-end infinite; /* Typing effect */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: yellow; }
+}
+
+/* navbar css */
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px; /* Add padding for a box-like appearance */
+    border-radius: 5px; /* Rounded corners */
+}
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 215, 0, 0.3); /* Light yellow background on hover */
+    color: #FFD700; /* Yellow text on hover */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); /* Light border for toggler */
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='white'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* White color for toggler icon */
+}
+
+
+
+
+/* maine body css */
+
+
+
+
+.container {
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.306);
+    margin-top: 50px;
+}
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.badge {
+    font-size: 0.9rem;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;
+}
+
+/* project description */
+@media (min-width: 768px) { /* For desktop devices */
+    .projectdescription {
+        font-size: 14px !important; /* Increase font size for desktop */
+    }
+}
+
+/* my profile part */
+
+.profile-image {
+    width: 450px; /* Adjust size as needed */
+    height: 450px; /* Adjust size as needed */
+    border-radius: 50%; /* Circular frame */
+    object-fit: cover; /* Cover the area */
+    border: 5px solid #fff; /* White border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    }
+.name {
+        color: rgb(251, 255, 0); /* Yellow color for the name */
+        font-size: 2.5rem; /* Adjust font size as needed */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for effect */
+    }
+.lol {
+        padding: 10px;
+    }
+
+h1 {
+        font-weight: bold; /* Bold for emphasis */
+    }
+.profilebox {
+    width: 80% !important;
+    max-width: none !important;
+    margin: 0 auto; /* Center the container */
+}
+@media (max-width: 576px) {
+    .profilebox {
+        width: 100% !important; /* Set width to 100% for mobile devices */
+        max-width: none !important;
+        margin: 0 auto; /* Center the container */
+    }
+}
+
+/* project part */
+.custom-container {
+    width: 80% !important; /* Set the width to 80% of the viewport */
+    max-width: none !important; /* Remove the max-width restriction */
+    margin: 0 auto; /* Center the container */
+}
+@media (max-width: 576px) {
+    .custom-container {
+        width: 95% !important; /* Set width to 100% for mobile devices */
+        max-width: none !important;
+        margin: 0 auto; /* Center the container */
+    }
+}
+
+/* MY IMPORTANT LINKS */
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons i {
+    font-size: 2.5rem; /* Increased icon size */
+    color: #fff; /* Icon color */
+    margin: 0 25px; /* Increased spacing between icons */
+    transition: color 0.3s ease;
+}
+.social-icons i:hover {
+    color: #00adb5; /* Change color on hover */
+}
+.btn-download {
+    background: linear-gradient(90deg, #00adb5, #007bff);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px; /* Space above the button */
+}
+.btn-download:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #007bff, #00adb5);
+}
+
+
+/* CONTACT FORM */
+.contactformbox {
+    width: 80% !important;
+    max-width: none !important; /* Remove the max-width restriction */
+    margin: 0 auto; /* Center the container */
+}
+@media (max-width: 576px) {
+    .contactformbox {
+        width: 95% !important; /* Set width to 100% for mobile devices */
+        max-width: none !important;
+        margin: 0 auto; /* Center the container */
+    }
+}
+.contact-form-container {
+    width: 50% !important;
+    margin: 0 auto; /* Center the container */
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.459);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+}
+@media (max-width: 576px) {
+    .contact-form-container {
+        width: 80% !important; /* Set width to 100% for mobile devices */
+        max-width: none !important;
+        margin: 0 auto; /* Center the container */
+    }
+}
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #00adb5;
+    box-shadow: 0 0 5px rgba(0, 173, 183, 0.5);
+}
+.btn-send {
+    background: linear-gradient(90deg, #00adb5, #007bff);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.btn-send:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #007bff, #00adb5);
+}
+/* 
+carousal */
+.carousal {
+    width: 80% !important;
+    max-width: none !important; /* Remove the max-width restriction */
+    margin: 0 auto; /* Center the container */
+}
+@media (max-width: 576px) {
+    .carousal {
+        width: 95% !important; /* Set width to 100% for mobile devices */
+        max-width: none !important;
+        margin: 0 auto; /* Center the container */
+    }
+}
+
+.carousel-item img {
+    width: 100% !important; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for caption */
+    border-radius: 5px; /* Rounded corners */
+}

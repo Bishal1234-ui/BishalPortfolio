@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'myportfolio/css/projects.css' %}">
+    
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #1a1a2e; /* Dark bluish-black tone */ ">
+        <a class="navbar-brand text-light" href="#">BISHAL HAZARIKA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'myportfolio:home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light active" href="{% url 'myportfolio:projects' %}">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">MY PROJECTS</h1>
+        {% if project_list %}
+            <div class="row">
+                {% for project in project_list %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 p-3">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description }}</p>
+                                <p class="card-text">
+                                    <strong>Tech Stack:</strong>
+                                    <div class="d-flex flex-wrap">
+                                        {% for tech in project.techstack %}
+                                            <span class="badge badge-pill badge-primary m-1">{{ tech }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </p>
+                                <a href="{{ project.link }}" class="btn btn-light text-dark" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center">No Projects are uploaded</p>
+        {% endif %}
+    </div>
+
+   
+
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; {{ current_year }} My Portfolio. All rights reserved.</p>
+            <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-white ml-3"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
