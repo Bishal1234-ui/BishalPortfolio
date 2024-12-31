@@ -1,0 +1,1 @@
+web: gunicorn BishalPortfolio.wsgi:application --log-file -
