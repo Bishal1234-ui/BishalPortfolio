@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import skill, project
+from .models import skill, project, certificate
 import json
 
 # Create your views here.
@@ -9,11 +9,12 @@ import json
 def home(request):
     skill_list = skill.objects.all()
     project_list = project.objects.all()
-
+    certificate_list = certificate.objects.all()
     
     context = {
         "skill_list" : skill_list,
         "project_list" : project_list,
+        "certificate_list" : certificate_list
     }
     return render(request, "myportfolio/home.html", context)
 

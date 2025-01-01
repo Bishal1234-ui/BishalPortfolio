@@ -26,5 +26,8 @@ class skill(models.Model):
 # certification
 class certificate(models.Model):
     title = models.CharField(max_length=200)
+    description = models.CharField(max_length=500, default="No Description Provided")
     link = models.URLField()
+    def __str__(self):
+        return self.title
 
